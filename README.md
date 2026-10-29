@@ -1,8 +1,8 @@
 # Omarchy
 
-Omarchy is a beautiful, fun & agentic Linux distribution by DHH.
+Omarchy is a beautiful, fun & agentic Linux distribution, maintained by SlapShotTech.
 
-Read more at [omarchy.org](https://omarchy.org).
+This is a fork of [Omarchy by DHH](https://github.com/omacom/omarchy). Read more about the upstream project at [omarchy.org](https://omarchy.org).
 
 ## The Omarchy Manual
 
