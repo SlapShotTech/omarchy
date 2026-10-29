@@ -88,7 +88,7 @@ set_log() {
 
 # Sync is off until it is turned on.
 reset_remotes
-set_local_theme lumon
+set_local_theme nord
 run_sync >/dev/null
 [[ ! -e $SYNC_TEST/ssh-calls ]] || fail "theme sync is off by default"
 pass "theme sync is off by default"
@@ -97,17 +97,17 @@ touch "$local_toggle"
 
 # Syncs every enabled machine except this one, skipping machines already on the theme.
 reset_remotes
-set_local_theme lumon
-echo "lumon" >"$SYNC_TEST/remotes/beta/.local/state/omarchy/current/theme.name"
-echo "lumon" >"$SYNC_TEST/remotes/local-box/.local/state/omarchy/current/theme.name"
+set_local_theme nord
+echo "nord" >"$SYNC_TEST/remotes/beta/.local/state/omarchy/current/theme.name"
+echo "nord" >"$SYNC_TEST/remotes/local-box/.local/state/omarchy/current/theme.name"
 output=$(run_sync)
-[[ $(set_log alpha) == "theme set lumon from=local-box session=wayland-1" ]] || fail "sets the theme inside the newest Hyprland session"
+[[ $(set_log alpha) == "theme set nord from=local-box session=wayland-1" ]] || fail "sets the theme inside the newest Hyprland session"
 pass "sets the theme inside the newest Hyprland session"
-[[ -z $(set_log beta) && $output == *"beta: already on lumon"* ]] || fail "skips a machine already on the theme"
+[[ -z $(set_log beta) && $output == *"beta: already on nord"* ]] || fail "skips a machine already on the theme"
 pass "skips a machine already on the theme"
 ! grep -qx retired "$SYNC_TEST/ssh-calls" || fail "skips disabled machines"
 pass "skips disabled machines"
-[[ -z $(set_log local-box) && $output == *"local-box: already on lumon"* ]] || fail "leaves this machine alone when it is listed"
+[[ -z $(set_log local-box) && $output == *"local-box: already on nord"* ]] || fail "leaves this machine alone when it is listed"
 pass "leaves this machine alone when it is listed"
 [[ $output == *"down: ssh: connect to host down"* ]] || fail "logs an unreachable machine"
 pass "logs an unreachable machine"

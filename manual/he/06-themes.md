@@ -14,9 +14,6 @@ _Tokyo Night_
  ![catppuccin](../themes/catppuccin/preview.png)
 _Catppuccin_
 
- ![lumon](../themes/lumon/preview.png)
-_Lumon_
-
  ![ethereal](../themes/ethereal/preview.png)
 _Ethereal_
 
@@ -95,9 +92,6 @@ _Jade Horse_
 
  ![kanagawa](../themes/kanagawa/preview-unlock.png)
 _Kanagawa_
-
- ![lumon](../themes/lumon/preview-unlock.png)
-_Lumon_
 
  ![matte-black](../themes/matte-black/preview-unlock.png)
 _Matte Black_
